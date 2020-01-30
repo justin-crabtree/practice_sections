@@ -27,11 +27,20 @@
 
 		 
 			 */
+$number1 = 10;
+$number2 = 20;
 
-		
+echo $number1 + $number2;
+
+echo "<br>";
+
+$names_1 = ['Justin', "Lex", "Jake"];
+$names_2 = ["first_name" => 'Justin', "last_name" => "Crabtree"];
+
+echo $names_2["first_name"];
 
 
-		?>
+?>
 
 	
 
