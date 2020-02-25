@@ -18,15 +18,30 @@
 	
 	<?php  
 
-	/*  Step 1 - Create a database in PHPmyadmin
+//  Step 1 - Create a database in PHPmyadmin
+//	Step 2 - Create a table like the one from the lecture
+//	Step 3 - Insert some Data
+//	Step 4 - Connect to Database and read data
 
-		Step 2 - Create a table like the one from the lecture
+$connection = mysqli_connect('localhost', 'root', '', 'practice_section_7');
 
-		Step 3 - Insert some Data
+if($connection) {
+  echo "connected";
+} else {
+  die("not connected");
+}
 
-		Step 4 - Connect to Database and read data
+$query = "SELECT * FROM users";
+$result = mysqli_query($connection, $query);
 
-*/
+if(!$result) {
+  die('Query FAILED' . mysqli_error());
+}
+
+while($row = mysqli_fetch_row($result)) {
+  print_r($row);
+}
+
 	
 	?>
 
